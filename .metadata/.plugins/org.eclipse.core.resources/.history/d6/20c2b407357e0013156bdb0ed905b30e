@@ -1,0 +1,109 @@
+package model;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
+
+
+/**
+ * The persistent class for the project database table.
+ * 
+ */
+@Entity
+@NamedQuery(name="Project.findAll", query="SELECT p FROM Project p")
+public class Project extends com.ccea.persistence.model.AbstractHibernateDAO<T> implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private String code;
+
+	private double actualDuration;
+
+	@Temporal(TemporalType.DATE)
+	private Date dateStarted;
+
+	private double estimatedDuration;
+
+	private String name;
+
+	private String owner;
+
+	//bi-directional many-to-one association to UserProject
+	@OneToMany(mappedBy="project")
+	private List<UserProject> userProjects;
+
+	public Project() {
+	}
+
+	public String getCode() {
+		return this.code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public double getActualDuration() {
+		return this.actualDuration;
+	}
+
+	public void setActualDuration(double actualDuration) {
+		this.actualDuration = actualDuration;
+	}
+
+	public Date getDateStarted() {
+		return this.dateStarted;
+	}
+
+	public void setDateStarted(Date dateStarted) {
+		this.dateStarted = dateStarted;
+	}
+
+	public double getEstimatedDuration() {
+		return this.estimatedDuration;
+	}
+
+	public void setEstimatedDuration(double estimatedDuration) {
+		this.estimatedDuration = estimatedDuration;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getOwner() {
+		return this.owner;
+	}
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+
+	public List<UserProject> getUserProjects() {
+		return this.userProjects;
+	}
+
+	public void setUserProjects(List<UserProject> userProjects) {
+		this.userProjects = userProjects;
+	}
+
+	public UserProject addUserProject(UserProject userProject) {
+		getUserProjects().add(userProject);
+		userProject.setProject(this);
+
+		return userProject;
+	}
+
+	public UserProject removeUserProject(UserProject userProject) {
+		getUserProjects().remove(userProject);
+		userProject.setProject(null);
+
+		return userProject;
+	}
+
+}

@@ -1,0 +1,32 @@
+package com.ccea.persistence;
+
+import java.util.Calendar;
+import java.util.List;
+
+import com.ccea.persistence.model.pojo.Project;
+import com.ccea.persistence.model.pojo.User;
+import com.ccea.persistence.model.pojo.UserProject;
+
+public abstract class AbstractCcaaTestData {
+	
+	Calendar cal = Calendar.getInstance();
+
+	public static User getUser1() {
+		
+		
+		
+	}
+	
+	public static User getUser2() {
+		
+	}
+	
+	public static UserProject getUserProject() {
+		
+	}
+	
+	public static List<Project> getProject() {
+		
+		
+	}
+}

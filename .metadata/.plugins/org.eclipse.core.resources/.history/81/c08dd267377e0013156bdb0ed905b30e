@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ 
+  <class name="com.totalgp.its.gas.service.beans.MPRN" table="JLS.MPR">
+    <id name="id" type="java.lang.Long">
+      <column name="MPR_ID"/>
+      <generator class="identity"/>
+    </id>
+    <property name="mprn" type="string">
+      <column length="10" name="MPR" not-null="true"/>
+    </property>
+    <property name="startDate" type="date">
+      <column name="START_DATE" not-null="true"/>
+    </property>
+    <property name="endDate" type="date">
+      <column name="END_DATE" not-null="false"/>
+    </property>  
+   
+  </class>
+   <sql-query callable="true" name="registerNewMpr">
+    <![CDATA[
+    <return class="com.totalgp.its.gas.service.beans.MPRN">
+        <return-property name="id" column="MPR_ID"/>
+        <return-property name="mprn"  column="MPR"/>
+        <return-property name="startDate"  column="START_DATE" />
+        <return-property name="endDate"  column="END_DATE" />
+    </return>
+        {call jls.pk_jules_gas.pr_register_mpr (?, :mpr, :startDate, :endDate)}
+
+    ]]>
+  </sql-query>
+</hibernate-mapping>

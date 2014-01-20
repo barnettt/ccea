@@ -1,0 +1,66 @@
+package com.ccea.persistence.report;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.ccea.persistence.exceptions.DataStoreException;
+import com.ccea.persistence.exceptions.InvalidLoginException;
+import com.ccea.persistence.model.ProjectDAO;
+import com.ccea.persistence.model.UserDAO;
+import com.ccea.persistence.model.UserProjectDAO;
+import com.ccea.persistence.model.pojo.User;
+import com.ccea.persistence.model.pojo.UserProject;
+
+@Service("uiServiceManager")
+@Transactional
+public class UIDataManager {
+	
+	@Autowired
+	UserDAO userDAO;
+	
+	@Autowired
+	ProjectDAO projectDAO;
+	
+	@Autowired	
+	UserProjectDAO userProjectDAO;
+	
+	private static String LOGIN_FIELD = "login";
+	protected static Logger logger = LoggerFactory
+            .getLogger(UIDataManager.class);
+	
+	
+    public boolean checkLoginDetails(String userName,String password) throws InvalidLoginException {
+    	 User u = null;
+    	 try {
+    		 u = userDAO.findByName(LOGIN_FIELD ,userName);
+    	 } catch (Exception e) {
+    		  
+    	 }
+    	 if(u.getPassword().equals(password)) {
+    		 return true;
+    	 }
+    	 return false;
+    	 
+    }
+    
+    /**
+     * 
+     * @param user
+     * @param userProject
+     * @return
+     * @throws DataStoreException
+     */
+    public boolean addUserProject(UserProject userProject) throws DataStoreException {
+    	try {    		  
+    	      userProjectDAO.create(userProject);
+    	} catch (Exception e) {
+    		logger.error(""+e);
+    		throw new DataStoreException(e.getMessage());
+    	}
+    	
+		return true;
+    }
+}

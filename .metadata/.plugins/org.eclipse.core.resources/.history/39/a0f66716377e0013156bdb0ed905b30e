@@ -1,0 +1,18 @@
+package com.ccea.persistence.model.pojo;
+
+import java.util.Date;
+
+
+@Entity
+@NamedQuery(name="Project.findAll", query="SELECT p FROM Project p")
+public class Project {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer code;
+	  private String name;  
+	  private String owner;
+	  private Date dateStarted;  
+	  private Double estimatedDuration;   
+	  private Double actualDuration;
+}

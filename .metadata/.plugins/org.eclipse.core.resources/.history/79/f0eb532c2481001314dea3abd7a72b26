@@ -1,0 +1,15 @@
+package com.ccea.web.action;
+
+import org.springframework.webflow.action.MultiAction;
+import org.springframework.webflow.execution.Event;
+
+public abstract class CeaAbstractEventAction extends MultiAction{
+
+	protected final Event success = new Event(this,"success");
+	protected final Event error  = new Event(this,"error");
+	
+	public CeaAbstractEventAction() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

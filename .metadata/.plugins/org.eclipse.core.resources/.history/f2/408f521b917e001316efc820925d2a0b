@@ -1,0 +1,7 @@
+package com.ccea.persistence;
+
+public interface Service {
+	
+	String getMessage();
+
+}

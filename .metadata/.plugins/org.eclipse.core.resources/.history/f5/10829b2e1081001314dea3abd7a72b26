@@ -1,0 +1,9 @@
+package com.ccea.web.action;
+
+public class UserLoginAction {
+
+	public UserLoginAction() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.ccea.persistence.model.pojo;
+
+import java.util.Date;
+
+public class UserProjectPK {
+	Integer id;
+	Date date;
+	Integer userId;
+	
+}

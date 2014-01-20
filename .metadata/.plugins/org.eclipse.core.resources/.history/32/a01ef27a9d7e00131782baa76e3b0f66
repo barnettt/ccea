@@ -1,0 +1,14 @@
+package com.ccea.persistence;
+
+public interface Service<Project, UserProject> {
+	
+	String getMessage();
+	
+	public Map<Project,List<UserProject>> getAllProjectReport();
+	
+	
+	public Map<List<UserProject>> getProjectReport(Project project);
+	
+	
+
+}

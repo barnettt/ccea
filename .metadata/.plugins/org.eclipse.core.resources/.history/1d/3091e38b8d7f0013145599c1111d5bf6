@@ -1,0 +1,23 @@
+package com.ccea.persistence;
+
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+@ContextConfiguration({ "classpath:/META-INF/ExampleConfigurationTests-context.xml" })
+@RunWith(SpringJUnit4ClassRunner.class)
+public class ExampleConfigurationTests {
+
+	@Autowired
+	private ReportServiceImpl reportService;
+
+	@Test
+	public void testSimpleProperties() throws Exception {
+		assertNotNull(reportService);
+	}
+
+}

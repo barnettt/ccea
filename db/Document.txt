@@ -1,0 +1,83 @@
+
+GRANT CREATE,CONNECT,  SELECT, INSERT, UPDATE, DELETE ON ccea.* TO ccea;
+
+CREATE USER 'ccea'@'localhost' IDENTIFIED BY 'ccea';
+
+mysqld-nt --init-file=C:\\mysql-init.txt change the root password.
+
+CREATE SCHEMA IF NOT EXISTS `ccea` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+
+
+CREATE  TABLE IF NOT EXISTS `CCEA`.`PROJECT` (
+
+  `code` BIGINT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(80),  
+  `owner` VARCHAR(40),
+  `dateStarted` DATE NOT NULL,  
+  `estimatedDuration` DOUBLE(8,2),   
+  `actualDuration`  DOUBLE(8,2),  
+   primary key(code)
+
+ )
+
+ENGINE = InnoDB;
+
+
+ CREATE TABLE IF NOT EXISTS `CCEA`.`USER` (
+ 
+ 	`userId`   BIGINT NOT NULL AUTO_INCREMENT,
+ 	`firstName`  VARCHAR(30) NOT NULL,
+ 	`lastName`   VARCHAR(30) NOT NULL,
+ 	`type` 	     VARCHAR(20) NOT NULL,
+ 	`login`      VARCHAR(20) NOT NULL,
+ 	`department` VARCHAR(20),
+ 	`password`   VARCHAR(8),
+ 	 primary key (userId)
+ )
+ 
+ ENGINE = InnoDB;
+ 
+CREATE TABLE IF NOT EXISTS `ccea`.`user_project` (
+	`id`   BIGINT NOT NULL AUTO_INCREMENT,
+	`projectName` VARCHAR(50),
+        `code` INTEGER NOT NULL, 
+	`userId` BIGINT NOT NULL, 	
+ 	`date`   DATE NOT NULL,
+ 	`hours`  INTEGER,
+ 	`minutes` INTEGER,
+ 	`startTime` VARCHAR(5),
+ 	`endTime` VARCHAR(5),
+ 	 primary key(id),
+	INDEX (userId),
+  	FOREIGN KEY (`userId`)
+  	REFERENCES `ccea`.`user`(`userId`)
+  	ON DELETE NO ACTION) 
+          
+ ENGINE = InnoDB;
+ 
+ 
+ 
+alter table  `CCEA`.`USER_PROJECT` 
+         
+         ADD  CONSTRAINT `code_FK`  
+         
+ 	 FOREIGN KEY (`code`)
+ 	 
+ 	 REFERENCES `ccea`.`project` (`code`)
+ 	 
+ 	 ON DELETE NO ACTION
+ 	 
+	 ON UPDATE NO ACTION;
+	 
+	 
+alter table  `CCEA`.`USER_PROJECT`
+
+  ADD  CONSTRAINT `ccea_user`
+
+  FOREIGN KEY (`user`)
+
+  REFERENCES `ccea`.`user` (`user`)
+
+  ON DELETE NO ACTION
+
+-- ---------------

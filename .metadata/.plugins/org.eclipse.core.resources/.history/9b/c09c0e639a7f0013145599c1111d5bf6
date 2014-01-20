@@ -1,0 +1,30 @@
+package com.ccea.persistence;
+
+import java.util.Map;
+import java.util.List;
+import java.util.Date;
+
+import com.ccea.persistence.model.pojo.Project;
+import com.ccea.persistence.model.pojo.User;
+
+/**
+ * Report service facade. Provide access to report data to the 
+ * web tier.
+ * 
+ * @author abuayyub
+ *
+ * @param <I>
+ * @param <T>
+ */
+public interface ReportService<I, T> {
+
+	
+	public Map<I, List<T>> getAllProjectReport();
+
+	public Map<I, List<T>> getProjectReport(Project project);
+	
+	public Map<I, List<T>> getReportAllProjectBetweenDates(Date startDate,Date endDate);
+	
+	public List<User> getAllUserProjects();
+
+}

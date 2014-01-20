@@ -1,0 +1,84 @@
+package com.ccea.persistence.model;
+
+import java.io.Serializable;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
+
+/**
+ * Abstract class providing implementation for some o the crud methods
+ * 
+ * @author abuayyub
+ *
+ * @param <I>
+ * @param <T>
+ */
+public abstract class AbstractHibernateDAO <T> extends HibernateDaoSupport implements CceaDAO <T> {
+
+	
+	private Class<T> type;
+	
+    @Autowired
+    protected SessionFactory sessionFactory; 
+	
+    @SuppressWarnings("unchecked")
+	public AbstractHibernateDAO() {
+        Type t = getClass().getGenericSuperclass();
+        ParameterizedType pt = (ParameterizedType) t;
+        setType((Class<T>) pt.getActualTypeArguments()[0]);
+    }
+
+    
+    protected String getClassName()
+	{
+		return type.getName();
+	}
+	
+
+	@Override
+	public List<T> findAll() {
+		return (List<T>)getHibernateTemplate().find("FROM " + type.getName());		
+	}
+
+	@Override
+	public abstract T findById(Object id);
+	
+
+	@Override
+	public abstract T findByName(String name);
+	
+	@Override
+	public List<T> findByObject(Object obj) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public T create(T obj) {
+	   
+		return  getHibernateTemplate().save(obj);
+	}
+	
+	public void update(T obj) {
+		
+	}
+	
+	public void delete(T obj) {
+		
+	}
+
+
+	public Class<T> getType() {
+		return type;
+	}
+
+
+	public void setType(Class<T> type) {
+		this.type = type;
+	}
+
+}

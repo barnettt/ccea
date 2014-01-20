@@ -1,0 +1,10 @@
+package com.ccea.persistence.model;
+
+import com.ccea.persistence.model.pojo.UserProject;
+
+public class UserProjectDAO extends AbstractHibernateDAO<Integer, UserProject> {
+	
+	public UserProjectDAO(){
+		super(UserProject.class);
+	}
+}

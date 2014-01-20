@@ -1,0 +1,92 @@
+package com.ccea.persistence.model;
+
+import java.io.Serializable;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.util.List;
+import java.util.Map;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
+import com.ccea.persistence.model.pojo.User;
+
+
+/**
+ * Abstract class providing implementation for some o the crud methods
+ * 
+ * @author abuayyub
+ *
+ * @param <I>
+ * @param <T>
+ */
+public abstract class AbstractHibernateDAO <T> extends HibernateDaoSupport implements CceaDAO <T> {
+
+	
+	private Class<T> type;
+	
+    @Autowired
+    protected SessionFactory sessionFactory; 
+	
+    @SuppressWarnings("unchecked")
+	public AbstractHibernateDAO() {
+        Type t = getClass().getGenericSuperclass();
+        ParameterizedType pt = (ParameterizedType) t;
+        setType((Class<T>) pt.getActualTypeArguments()[0]);
+    }
+
+    
+    protected String getClassName()
+	{
+		return type.getName();
+	}
+	
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<T> findAll() {
+		return (List<T>)getHibernateTemplate().find("FROM " + type.getName());		
+	}
+
+	@Override
+	public abstract T findById(Object id);
+	
+
+	@Override
+	public List<T> findByName(Map<String,String> field) {
+//		List<T> userList =  getHibernateTemplate().findByExample(u);
+//		getHibernateTemplate().findByExample(u);;		
+		return null;
+	}
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<T> findByObject(Object obj) {
+		return getHibernateTemplate().findByExample(obj);
+		
+	}
+	
+	public void create(T obj) {
+	   
+	  getHibernateTemplate().save(obj);
+	}
+	
+	public void update(T obj) {
+		getHibernateTemplate().saveOrUpdate(obj);
+	}
+	
+	public void delete(T obj) {
+		getHibernateTemplate().delete(obj);
+	}
+
+
+	public Class<T> getType() {
+		return type;
+	}
+
+
+	public void setType(Class<T> type) {
+		this.type = type;
+	}
+
+}

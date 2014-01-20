@@ -1,0 +1,29 @@
+package com.ccea.persistence.report;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.ccea.persistence.model.ProjectDAO;
+import com.ccea.persistence.model.UserDAO;
+import com.ccea.persistence.model.UserProjectDAO;
+
+@Service("uiServiceManager")
+@Transactional
+public class UIServiceManager {
+	
+	@Autowired
+	UserDAO userDAO;
+	
+	@Autowired
+	ProjectDAO projectDAO;
+	
+	@Autowired	
+	UserProjectDAO userProjectDAO;
+	
+	private static String LOGIN_FIELD = "login";
+	
+    public String checkLoginDetails(String userName,String password) {
+    	 User u = userDAO.findByName(LOGIN_FIELD ,userName);
+    }
+}

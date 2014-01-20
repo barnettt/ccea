@@ -1,0 +1,7 @@
+package com.ccea.persistence.model;
+
+import java.util.Date;
+
+public class ProjectDAO {
+	 
+}
