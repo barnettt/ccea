@@ -1,0 +1,71 @@
+package com.ccea.persistence.model;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import org.hibernate.Criteria;
+import org.hibernate.criterion.CriteriaSpecification;
+import org.hibernate.criterion.Restrictions;
+import org.springframework.stereotype.Repository;
+
+import com.ccea.persistence.model.pojo.Project;
+import com.ccea.persistence.model.pojo.User;
+import com.ccea.persistence.model.pojo.UserProject;
+
+/**
+ * user DAO for managing the user within the system
+ * 
+ * @author abuayyub
+ * 
+ */
+@SuppressWarnings("unchecked")
+@Repository("userDAO")
+public class UserDAO extends AbstractHibernateDAO<User> {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2490985543626828270L;
+    private static String USER_PROJECT_NAME="com.ccea.persistence.model.pojo.UserProject";
+    private static String USER_CLASS_NAME="com.ccea.persistence.model.pojo.User";
+    private static String USER_WHERE_CLAUSE=" WHERE p.userId = u.userId ";
+	public UserDAO() {
+		super();
+	}
+
+	public User findById(Integer id) {
+		// TODO Auto-generated method stub
+		Criteria c = getSessionFactory().getCurrentSession().createCriteria(
+				User.class,"user");			
+		c.createAlias("user.userProjects", "proj");		
+		c.add(Restrictions.eq("proj.userId", id));
+		c.add(Restrictions.eq("user.userId", id));
+		c.setResultTransformer(CriteriaSpecification.DISTINCT_ROOT_ENTITY);		
+		List<User> userList = c.list();
+		if(userList.isEmpty()) {
+			return null;
+		}
+		return userList.get(0);
+	}
+
+	@Override
+	public User findByName(String field, String value) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	public List<User> findAllUserProjects() {
+		StringBuilder b = new StringBuilder();
+		b.append("FROM ");
+		b.append(USER_CLASS_NAME);
+		b.append(" p, ");
+		b.append(USER_PROJECT_NAME);
+		b.append(" u ");
+		b.append(USER_WHERE_CLAUSE);
+	
+		return (List<User>) getSessionFactory().getCurrentSession()
+				.createQuery(b.toString()).list();
+	}
+
+}

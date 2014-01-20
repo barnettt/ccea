@@ -1,0 +1,45 @@
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+    
+
+    <var name="userBean" class="com.ccea.persistence.model.pojo.User" />
+    <var name="projectWrapperBean" class="com.ccea.web.beans.ProjectBeanWrapper" />
+       
+     <view-state id="userLoginProcess"  view="/WEB-INF/views/login.xhtml">
+         <transition on="processLogin" to="processLoginAction" />
+    </view-state>
+    
+    <view-state id="enterProjectInfo"  view="/WEB-INF/views/enterProject.xhtml">
+         <transition on="processProject" to="enterUserProjectAction" />
+    </view-state>
+    
+
+    
+    <action-state id="processLoginAction">
+        <evaluate expression="userLoginAction" />
+        <transition on="success" to="enterProjectInfo"/>
+        <transition on="error" to="userLoginProcess"/>
+    </action-state>
+    
+    <action-state id="processUserProjectAction">
+        <evaluate expression="enterUserProjectAction" />
+        <transition on="success" to="enterProjectInfo"/>
+        <transition on="error" to="userLoginProcess"/>
+    </action-state>
+    
+    
+    <view-state id="processLogin" >
+        <on-render>
+            <evaluate expression="bookingService.findBookings(currentUser?.name)" result="viewScope.bookings" result-type="dataModel" />
+        </on-render>
+        <transition on="search" to="reviewHotels"/>
+        <transition on="cancelBooking">
+            <evaluate expression="bookingService.cancelBooking(bookings.selectedRow)" />
+        </transition>
+    </view-state>
+    
+   
+    <end-state id="finish" />
+    
+</flow>

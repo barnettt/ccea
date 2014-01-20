@@ -1,0 +1,9 @@
+package com.ccea.web.beans;
+
+public class ProjectBeanWrapper {
+
+	public ProjectBeanWrapper() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

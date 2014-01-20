@@ -1,0 +1,31 @@
+package com.ccea.persistence;
+
+import org.springframework.stereotype.Component;
+
+
+/**
+ * {@link Service} with hard-coded input data.
+ */
+@Component
+public class ReportService implements Service {
+	
+	/**
+	 * Reads next record from input
+	 */
+	public String getMessage() {
+		return "Hello world!";	
+	}
+
+	@Override
+	public Map<Project, List<UserProject>> getAllProjectReport() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Map<List<UserProject>> getProjectReport(Project project) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

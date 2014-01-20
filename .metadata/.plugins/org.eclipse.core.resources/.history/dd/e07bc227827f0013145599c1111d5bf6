@@ -1,0 +1,16 @@
+package com.ccea.persistence.report;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.ccea.persistence.model.UserDAO;
+
+@Service("UserReport")
+@Transactional
+public class UserReportManager {
+	
+	@Autowired
+	UserDAO userDao;
+}

@@ -1,0 +1,9 @@
+package com.ccea.web.action;
+
+public class CeaAbstractEventAction {
+
+	public CeaAbstractEventAction() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

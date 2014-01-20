@@ -1,0 +1,5 @@
+package com.ccea.persistence.model.pojo;
+
+public class UserProjectPK {
+
+}

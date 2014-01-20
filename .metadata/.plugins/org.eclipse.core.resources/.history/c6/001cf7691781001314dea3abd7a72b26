@@ -1,0 +1,9 @@
+package com.ccea.web.action;
+
+public class EnterProjectAction {
+
+	public EnterProjectAction() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

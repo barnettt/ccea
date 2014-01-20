@@ -1,0 +1,78 @@
+package com.ccea.persistence.model.pojo;
+
+import java.util.Date;
+
+import javax.persistence.Embeddable;
+
+
+/**
+ * Compound primary key for projects
+ * @author abuayyub
+ *
+ */
+public class UserProjectPK {
+	Integer id;
+	Date date;
+	Integer user;
+	/**
+	 * @return the id
+	 */
+	public Integer getId() {
+		return id;
+	}
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	/**
+	 * @return the date
+	 */
+	public Date getDate() {
+		return date;
+	}
+	/**
+	 * @param date the date to set
+	 */
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	/**
+	 * @return the user
+	 */
+	public Integer getUser() {
+		return user;
+	}
+	/**
+	 * @param user the user to set
+	 */
+	public void setUser(Integer user) {
+		this.user = user;
+	}
+	
+	@Override
+	public int hashCode() {
+		int seed=15;		
+		int result = id.hashCode()* seed;
+		result =(result * seed)+date.hashCode();
+		result = (result * seed) + user.hashCode();
+		result = result >>> 32;
+		
+		return (id.hashCode()+date.hashCode()+user.hashCode())*seed;		
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		UserProjectPK up = null;
+		if(o instanceof UserProject){
+			up = (UserProjectPK)o;
+	   }
+	if (  this.id.equals(up.getId()) 
+			&& this.date.equals(up.getDate())
+			&& this.user.equals(up.getUser())){
+		return true;
+	}
+	return false;
+  }
+}

@@ -1,0 +1,12 @@
+package com.ccea.persistence.model;
+
+import java.util.Date;
+
+public class ProjectDAO {
+	 private Integer code;
+	  private String name;  
+	  private String owner;
+	  private Date dateStarted;  
+	  private Double estimatedDuration;   
+	  private Double actualDuration;
+}

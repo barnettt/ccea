@@ -1,0 +1,30 @@
+package com.ccea.web.action;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.webflow.execution.Action;
+import org.springframework.webflow.execution.Event;
+import org.springframework.webflow.execution.RequestContext;
+
+import com.ccea.persistence.report.UIDataManager;
+
+public class UserLoginAction implements Action {
+	
+	protected static Logger logger = LoggerFactory
+            .getLogger(UserLoginAction.class);
+	
+	@Autowired
+	UIDataManager uiDataManager;
+	
+	public UserLoginAction() {
+		super();
+	}
+
+	@Override
+	public Event execute(RequestContext arg0) throws Exception {
+		logger.info("Enter UserLoggerAction");
+		return null;
+	}
+
+}

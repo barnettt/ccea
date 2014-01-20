@@ -1,0 +1,6 @@
+package com.ccea.persistence.delegate;
+
+
+public class ReportsDelegate {
+
+}

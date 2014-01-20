@@ -1,0 +1,17 @@
+package com.ccea.persistence.model;
+
+
+import java.util.List;
+
+public interface CceaDAO <I , T> {
+	
+	public List<T> findAll();
+	
+	public T findById(Object id);
+	
+	public T findByName(String field);
+	
+	public List<T> findByObject (Object obj);
+	
+	
+}

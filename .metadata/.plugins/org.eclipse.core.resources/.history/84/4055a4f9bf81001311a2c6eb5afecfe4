@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:icecore="http://www.icefaces.org/icefaces/core"
+      xmlns:ice="http://www.icefaces.org/icefaces/component">
+
+<h:head>
+    <title>User Project Time</title>
+</h:head>
+<h:body>
+<section>
+<h1>
+   userproj
+    private String projectName;
+    private Integer code;
+    private Integer hours;
+    private Integer minutes;
+    private String startTime;
+    private String endTime;
+    private User user;
+    
+    private Date date;
+    private Integer userId
+    
+    Please add user/project time!  
+</h1>
+<h:form>
+        <icecore:singleSubmit/>
+        <h:panelGrid columns="3">
+            <ice:outputLabel for="username" value="Username:"/>
+            <ice:inputText id="username" value="#{userBean.login}" required="true" maxlength="20"/>
+            <h:message for="username"/>
+
+            <h:outputLabel for="projectTxt" value="ProjectName:"/>
+            <ice:selectOneMenu id="projectTxt" value="#{projecttBeanWrapper.currentProject}" required="true"
+                         size="2" 
+                         >
+                         <f:selectItems value="#{projecttBeanWrapper.projects}"/>
+            </ice:selectOneMenu>  
+            
+                   <ice:selectInputDate value="#{calendar.date}"
+                                     renderAsPopup="false"
+                                     highlightClass="dateHighlightGray"
+                                     highlightUnit="DAY_OF_WEEK"
+                                     highlightValue="1"
+                                     renderMonthAsDropdown="true"
+                                     renderYearAsDropdown="true">
+                   
+                    
+            <ice:outputLabel for="date" value="Date:"/>
+            <ice:selectInputDate id="date" value="#{userProjectBean.date}" 
+                           renderAsPopup="false"
+                           renderMonthAsDropdown="true"
+                           required="true"/>
+                       <f:convertDateTime pattern="#{userProjectBean.pattern}"/>
+            <h:message for="date"/>
+            
+            <ice:outputLabel for="username" value="Username:"/>
+            <ice:inputText id="username" value="#{userBean.login}" required="true" maxlength="20"/>
+            <h:message for="username"/>
+            
+            <ice:outputLabel for="username" value="Username:"/>
+            <ice:inputText id="username" value="#{userBean.login}" required="true" maxlength="20"/>
+            <h:message for="username"/>
+                
+           
+        </ice:panelGrid>
+        <ice:commandButton value="Submit" action="#{userBean.submitButton}"/>
+    </h:form>
+</section>
+<P>  The time on the server is ${serverTime}. </P>
+</h:body>
+</html>

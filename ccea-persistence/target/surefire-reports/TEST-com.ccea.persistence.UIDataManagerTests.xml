@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ccea.persistence.UIDataManagerTests" time="18.922" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Java\jdk1.7\jre\bin"/>
+    <property name="java.vm.version" value="23.25-b01"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 3"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="d:\workspace-ccea\ccea-persistence"/>
+    <property name="java.runtime.version" value="1.7.0_25-b17"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Java\jdk1.7\jre\lib\endorsed"/>
+    <property name="os.arch" value="x86"/>
+    <property name="java.io.tmpdir" value="C:\DOCUME~1\abuayyub\LOCALS~1\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows XP"/>
+    <property name="classworlds.conf" value="D:\workspace-ccea\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf4252419106273544167.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Java\jdk1.7\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre7/bin/client;C:/Program Files/Java/jre7/bin;C:/Program Files/Java/jre7/lib/i386;d:\oracle\app\abuayyub\product\11.2.0\dbhome_d\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;D:\apache-ant-1.8.2\bin;D:\mysql-5.6.11\bin;C:\Program Files\Internet Explorer;C:\Program Files\QuickTime\QTSystem\;D:\MySQL-Workbench-6.0.7\mysql-utilities\;d:\Program Files\Git\cmd;d:\Program Files\OpenVPN\bin;C:\Program Files\OpenVPN\bin;D:\apache-maven-3.1.1\bin;D:\mongodb-2.4.7\bin;D:\Python27;D:\springsource\sts-3.4.0.RELEASE;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="51.0"/>
+    <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+    <property name="os.version" value="5.1"/>
+    <property name="user.home" value="C:\Documents and Settings\abuayyub"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.7"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="abuayyub"/>
+    <property name="java.class.path" value="/D:/springsource/sts-3.4.0.RELEASE/configuration/org.eclipse.osgi/bundles/578/1/.cp/jars/plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.7"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="java.home" value="C:\Java\jdk1.7\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -s d:\.m2\settings.xml clean install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="1.7.0_25"/>
+    <property name="java.ext.dirs" value="C:\Java\jdk1.7\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Java\jdk1.7\jre\lib\resources.jar;C:\Java\jdk1.7\jre\lib\rt.jar;C:\Java\jdk1.7\jre\lib\sunrsasign.jar;C:\Java\jdk1.7\jre\lib\jsse.jar;C:\Java\jdk1.7\jre\lib\jce.jar;C:\Java\jdk1.7\jre\lib\charsets.jar;C:\Java\jdk1.7\jre\lib\jfr.jar;C:\Java\jdk1.7\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="d:\workspace-ccea\ccea-persistence\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="maven.bootclasspath" value="/D:/springsource/sts-3.4.0.RELEASE/configuration/org.eclipse.osgi/bundles/578/1/.cp/jars/plexus-classworlds-2.4.jar"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+  </properties>
+  <testcase name="test" classname="com.ccea.persistence.UIDataManagerTests" time="18.922">
+    <error message="Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.JDBCConnectionException: Could not open connection" type="org.springframework.transaction.CannotCreateTransactionException"><![CDATA[org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.JDBCConnectionException: Could not open connection
+	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:514)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:372)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.startTransaction(TransactionalTestExecutionListener.java:583)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.startNewTransaction(TransactionalTestExecutionListener.java:276)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:171)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:348)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.hibernate.exception.JDBCConnectionException: Could not open connection
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:132)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:125)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:110)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.obtainConnection(LogicalConnectionImpl.java:221)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.getConnection(LogicalConnectionImpl.java:157)
+	at org.hibernate.internal.SessionImpl.connection(SessionImpl.java:550)
+	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:428)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:372)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.startTransaction(TransactionalTestExecutionListener.java:583)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.startNewTransaction(TransactionalTestExecutionListener.java:276)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:171)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:348)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1129)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:358)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2489)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2526)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2311)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:834)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:347)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:82)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:256)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:816)
+	at org.apache.commons.dbcp.PoolingDataSource.getConnection(PoolingDataSource.java:115)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:430)
+	at org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:141)
+	at org.hibernate.internal.AbstractSessionImpl$NonContextualJdbcConnectionAccess.obtainConnection(AbstractSessionImpl.java:292)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.obtainConnection(LogicalConnectionImpl.java:214)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.getConnection(LogicalConnectionImpl.java:157)
+	at org.hibernate.internal.SessionImpl.connection(SessionImpl.java:550)
+	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:428)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:372)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.startTransaction(TransactionalTestExecutionListener.java:583)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.startNewTransaction(TransactionalTestExecutionListener.java:276)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:171)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:348)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.TwoStacksPlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:308)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2489)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2526)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2311)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:834)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:347)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:82)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:256)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:816)
+	at org.apache.commons.dbcp.PoolingDataSource.getConnection(PoolingDataSource.java:115)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:430)
+	at org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:141)
+	at org.hibernate.internal.AbstractSessionImpl$NonContextualJdbcConnectionAccess.obtainConnection(AbstractSessionImpl.java:292)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.obtainConnection(LogicalConnectionImpl.java:214)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.getConnection(LogicalConnectionImpl.java:157)
+	at org.hibernate.internal.SessionImpl.connection(SessionImpl.java:550)
+	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:428)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:372)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.startTransaction(TransactionalTestExecutionListener.java:583)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.startNewTransaction(TransactionalTestExecutionListener.java:276)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:171)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:348)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+]]></error>
+    <system-out><![CDATA[18:16:53,031 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration boolean -> org.hibernate.type.BooleanType@11ae15a
+18:16:53,046 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration boolean -> org.hibernate.type.BooleanType@11ae15a
+18:16:53,046 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@11ae15a
+18:16:53,078 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@1cf95a8
+18:16:53,078 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@69929e
+18:16:53,078 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration yes_no -> org.hibernate.type.YesNoType@f686da
+18:16:53,109 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration byte -> org.hibernate.type.ByteType@4985d9
+18:16:53,125 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration byte -> org.hibernate.type.ByteType@4985d9
+18:16:53,125 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@4985d9
+18:16:53,125 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration character -> org.hibernate.type.CharacterType@55c819
+18:16:53,125 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration char -> org.hibernate.type.CharacterType@55c819
+18:16:53,125 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@55c819
+18:16:53,187 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration short -> org.hibernate.type.ShortType@30aaf3
+18:16:53,187 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration short -> org.hibernate.type.ShortType@30aaf3
+18:16:53,218 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@30aaf3
+18:16:53,218 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration integer -> org.hibernate.type.IntegerType@1f54169
+18:16:53,218 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration int -> org.hibernate.type.IntegerType@1f54169
+18:16:53,250 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@1f54169
+18:16:53,265 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration long -> org.hibernate.type.LongType@26afff
+18:16:53,265 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration long -> org.hibernate.type.LongType@26afff
+18:16:53,265 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@26afff
+18:16:53,296 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration float -> org.hibernate.type.FloatType@1e3bb25
+18:16:53,296 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration float -> org.hibernate.type.FloatType@1e3bb25
+18:16:53,296 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@1e3bb25
+18:16:53,296 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration double -> org.hibernate.type.DoubleType@1ca2026
+18:16:53,296 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration double -> org.hibernate.type.DoubleType@1ca2026
+18:16:53,296 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@1ca2026
+18:16:53,328 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@1f31c64
+18:16:53,328 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@1f31c64
+18:16:53,328 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@eb5f3
+18:16:53,328 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@eb5f3
+18:16:53,359 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration string -> org.hibernate.type.StringType@1257d77
+18:16:53,359 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.lang.String -> org.hibernate.type.StringType@1257d77
+18:16:53,359 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@518fb9
+18:16:53,375 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@96d02d
+18:16:53,375 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration url -> org.hibernate.type.UrlType@96bfe3
+18:16:53,375 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@96bfe3
+18:16:53,390 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration date -> org.hibernate.type.DateType@e335ef
+18:16:53,390 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@e335ef
+18:16:53,406 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration time -> org.hibernate.type.TimeType@da7ad5
+18:16:53,421 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@da7ad5
+18:16:53,437 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration timestamp -> org.hibernate.type.TimestampType@bde4a2
+18:16:53,437 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@bde4a2
+18:16:53,437 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@bde4a2
+18:16:53,453 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@fe10f1
+18:16:53,468 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration calendar -> org.hibernate.type.CalendarType@13d9c96
+18:16:53,484 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@13d9c96
+18:16:53,484 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@13d9c96
+18:16:53,500 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@1afd333
+18:16:53,500 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration locale -> org.hibernate.type.LocaleType@fb295
+18:16:53,500 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@fb295
+18:16:53,515 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration currency -> org.hibernate.type.CurrencyType@ddf1df
+18:16:53,515 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@ddf1df
+18:16:53,515 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@1ab7a89
+18:16:53,515 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@1ab7a89
+18:16:53,531 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration class -> org.hibernate.type.ClassType@3fe07e
+18:16:53,531 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@3fe07e
+18:16:53,531 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@1b271ad
+18:16:53,531 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@1b271ad
+18:16:53,578 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@13e39e8
+18:16:53,578 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@102e62e
+18:16:53,593 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration binary -> org.hibernate.type.BinaryType@302754
+18:16:53,593 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration byte[] -> org.hibernate.type.BinaryType@302754
+18:16:53,593 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration [B -> org.hibernate.type.BinaryType@302754
+18:16:53,609 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@17f9803
+18:16:53,609 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@17f9803
+18:16:53,609 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@17f9803
+18:16:53,609 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration image -> org.hibernate.type.ImageType@2dce20
+18:16:53,625 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration characters -> org.hibernate.type.CharArrayType@9e5b31
+18:16:53,625 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration char[] -> org.hibernate.type.CharArrayType@9e5b31
+18:16:53,625 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration [C -> org.hibernate.type.CharArrayType@9e5b31
+18:16:53,625 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@197627b
+18:16:53,625 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@197627b
+18:16:53,640 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@197627b
+18:16:53,640 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration text -> org.hibernate.type.TextType@12e8f81
+18:16:53,640 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration ntext -> org.hibernate.type.NTextType@753e7a
+18:16:53,687 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration blob -> org.hibernate.type.BlobType@993445
+18:16:53,687 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@993445
+18:16:53,687 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@8d4682
+18:16:53,750 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration clob -> org.hibernate.type.ClobType@2899d0
+18:16:53,750 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@2899d0
+18:16:53,765 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration nclob -> org.hibernate.type.NClobType@fb305f
+18:16:53,765 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@fb305f
+18:16:53,765 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@1067f21
+18:16:53,765 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@1a537e7
+18:16:53,765 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration serializable -> org.hibernate.type.SerializableType@ae121e
+18:16:53,781 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration object -> org.hibernate.type.ObjectType@2168ab
+18:16:53,781 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@2168ab
+18:16:53,781 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@1f2898b
+18:16:53,781 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@f08d6f
+18:16:53,828 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@68bc46
+18:16:53,828 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@4afb60
+18:16:53,828 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@23cb64
+18:16:53,828 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@1f7857f
+18:16:53,828 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@1b31f2
+18:16:53,828 DEBUG     org.hibernate.type.BasicTypeRegistry: 148 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@7c91fe
+18:16:53,906  INFO org.hibernate.annotations.common.Version:  37 - HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+18:16:53,968  INFO                    org.hibernate.Version:  41 - HHH000412: Hibernate Core {4.2.2.Final}
+18:16:53,984  INFO            org.hibernate.cfg.Environment: 239 - HHH000206: hibernate.properties not found
+18:16:53,984  INFO            org.hibernate.cfg.Environment: 342 - HHH000021: Bytecode provider name : javassist
+18:16:54,296  INFO          org.hibernate.cfg.Configuration: 470 - HHH000220: Reading mappings from file: d:\workspace-ccea\ccea-persistence\target\classes\META-INF\spring\Project.hbm.xml
+18:16:54,625  WARN nate.internal.util.xml.DTDEntityResolver:  74 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+18:16:54,921  INFO          org.hibernate.cfg.Configuration: 470 - HHH000220: Reading mappings from file: d:\workspace-ccea\ccea-persistence\target\classes\META-INF\spring\User.hbm.xml
+18:16:54,921  WARN nate.internal.util.xml.DTDEntityResolver:  74 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+18:16:55,046  INFO          org.hibernate.cfg.Configuration: 470 - HHH000220: Reading mappings from file: d:\workspace-ccea\ccea-persistence\target\classes\META-INF\spring\UserProject.hbm.xml
+18:16:55,046  WARN nate.internal.util.xml.DTDEntityResolver:  74 - HHH000223: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/. Use namespace http://www.hibernate.org/dtd/ instead. Refer to Hibernate 3.6 Migration Guide!
+18:16:57,906  WARN te.engine.jdbc.internal.JdbcServicesImpl: 169 - HHH000342: Could not obtain connection to query metadata : Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+18:16:57,984  INFO            org.hibernate.dialect.Dialect: 130 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+18:16:58,046  INFO e.engine.jdbc.internal.LobCreatorBuilder:  85 - HHH000422: Disabling contextual LOB creation as connection was null
+18:16:58,546  INFO ion.internal.TransactionFactoryInitiator:  68 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+18:16:58,593  INFO l.internal.ast.ASTQueryTranslatorFactory:  48 - HHH000397: Using ASTQueryTranslatorFactory
+18:16:58,734 TRACE           org.hibernate.type.TypeFactory:  71 - Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@b7458e
+18:17:03,562  WARN rnate.engine.jdbc.spi.SqlExceptionHelper: 145 - SQL Error: 0, SQLState: 08S01
+18:17:03,562 ERROR rnate.engine.jdbc.spi.SqlExceptionHelper: 147 - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/d:/.m2/repository/org/slf4j/slf4j-simple/1.7.5/slf4j-simple-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/d:/.m2/repository/ch/qos/logback/logback-classic/1.0.0/logback-classic-1.0.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.SimpleLoggerFactory]
+[main] INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/ExampleConfigurationTests-context.xml]
+[main] INFO org.springframework.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/app-context.xml]
+[main] INFO org.springframework.context.annotation.ClassPathBeanDefinitionScanner - JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+[main] INFO org.springframework.context.support.GenericApplicationContext - Refreshing org.springframework.context.support.GenericApplicationContext@16ff2d9: startup date [Sun Jan 19 18:16:49 GMT 2014]; root of context hierarchy
+[main] INFO org.springframework.beans.factory.config.PropertyPlaceholderConfigurer - Loading properties file from class path resource [META-INF/spring/jdbc.properties]
+[main] INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[main] INFO org.springframework.beans.factory.support.DefaultListableBeanFactory - Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@9458ea: defining beans [projectDAO,userDAO,userProjectDAO,uiServiceManager,userReportManager,reportService,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,propertyConfigurer,dataSource,sessionFactory,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,transactionManager,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+[main] INFO org.hibernate.validator.util.Version - Hibernate Validator 4.2.0.Final
+[main] INFO org.springframework.orm.hibernate4.HibernateTransactionManager - Using DataSource [org.apache.commons.dbcp.BasicDataSource@a50a81] of Hibernate SessionFactory for HibernateTransactionManager
+[main] WARN org.springframework.test.context.TestContextManager - Caught exception while allowing TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@1ad91ce] to process 'before' execution of test method [public void com.ccea.persistence.UIDataManagerTests.test()] for test instance [com.ccea.persistence.UIDataManagerTests@3fabd8]
+org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.JDBCConnectionException: Could not open connection
+	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:514)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:372)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener$TransactionContext.startTransaction(TransactionalTestExecutionListener.java:583)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.startNewTransaction(TransactionalTestExecutionListener.java:276)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:171)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:348)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:73)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:83)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:72)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:231)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:88)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:71)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:174)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: org.hibernate.exception.JDBCConnectionException: Could not open connection
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:132)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:49)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:125)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:110)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.obtainConnection(LogicalConnectionImpl.java:221)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.getConnection(LogicalConnectionImpl.java:157)
+	at org.hibernate.internal.SessionImpl.connection(SessionImpl.java:550)
+	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:428)
+	... 26 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1129)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:358)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2489)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2526)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2311)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:834)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:416)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:347)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:82)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:256)
+	at org.apache.commons.pool.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:816)
+	at org.apache.commons.dbcp.PoolingDataSource.getConnection(PoolingDataSource.java:115)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:430)
+	at org.hibernate.service.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:141)
+	at org.hibernate.internal.AbstractSessionImpl$NonContextualJdbcConnectionAccess.obtainConnection(AbstractSessionImpl.java:292)
+	at org.hibernate.engine.jdbc.internal.LogicalConnectionImpl.obtainConnection(LogicalConnectionImpl.java:214)
+	... 29 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.TwoStacksPlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:241)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:308)
+	... 49 more
+]]></system-err>
+  </testcase>
+</testsuite>

@@ -1,0 +1,41 @@
+package com.ccea.persistence.model;
+
+import java.io.Serializable;
+import java.util.List;
+
+/**
+ * Abstract class providing implementation for some o the crud methods
+ * 
+ * @author abuayyub
+ *
+ * @param <I>
+ * @param <T>
+ */
+public abstract class AbstractHibernateDAO <I extends Serializable, T> implements CceaDAO <I,T> {
+
+	public AbstractHibernateDAO(Object o) {
+		
+	}
+
+	@Override
+	public List<T> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public abstract T findById(Integer id);
+	
+
+	@Override
+	public abstract T findByName(String name);
+	
+	@Override
+	public List<T> findByObject(Object obj) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.4.0.201310051539-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[true]]></enableImports>
+	<configs>
+		<config>target/m2e-wtp/web-resources/WEB-INF/spring/config/security-config.xml</config>
+		<config>target/m2e-wtp/web-resources/WEB-INF/spring/config/webflow-config.xml</config>
+		<config>target/m2e-wtp/web-resources/WEB-INF/spring/config/webmvc-config.xml</config>
+	</configs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

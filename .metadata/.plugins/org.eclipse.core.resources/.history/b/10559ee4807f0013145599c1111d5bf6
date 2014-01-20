@@ -1,0 +1,5 @@
+package com.ccea.persistence.report;
+
+public class ProjectReport {
+
+}

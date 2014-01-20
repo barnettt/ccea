@@ -1,0 +1,13 @@
+package com.ccea.persistence.model;
+
+import java.util.Date;
+
+import com.ccea.persistence.model.pojo.Project;
+
+
+public class ProjectDAO extends AbstractHibernateDAO<Integer, Project>  {
+	 
+	public ProjectDAO() {
+		 super(Project.class);
+	 }
+}
