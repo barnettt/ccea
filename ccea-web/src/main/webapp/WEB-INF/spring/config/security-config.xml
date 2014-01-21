@@ -61,12 +61,16 @@
 
 
     <beans:bean id="sessionManagementFilter"
-            class="org.springframework.security.web.session.SessionManagementFilter">
+        class="org.springframework.security.web.session.SessionManagementFilter">
         <beans:constructor-arg name="securityContextRepository" ref="httpSessionSecurityContextRepository" />
-        <beans:property name="invalidSessionUrl" value="/auth/sessionExpired.jsf" />
-        <beans:property name="redirectStrategy" ref="jsfRedirectStrategy" />
+        <beans:property name="invalidSessionStrategy">
+            <beans:bean
+                class="org.springframework.security.web.session.SimpleRedirectInvalidSessionStrategy">
+                <beans:constructor-arg name="invalidSessionUrl"
+                    value="/login" />
+            </beans:bean>
+        </beans:property>   
     </beans:bean>
-
 
     <!-- http://static.springsource.org/spring-security/site/docs/3.1.x/reference/core-web-filters.html -->
     <beans:bean id="exceptionTranslationFilter" class="org.springframework.security.web.access.ExceptionTranslationFilter">

@@ -12,23 +12,12 @@
 <h:body>
 <section>
 <h1>
-   userproj
-    private String projectName;
-    private Integer code;
-    private Integer hours;
-    private Integer minutes;
-    private String startTime;
-    private String endTime;
-    private User user;
-    
-    private Date date;
-    private Integer userId
-    
+  
     Please add user/project time!  
 </h1>
 <h:form>
         <icecore:singleSubmit/>
-        <h:panelGrid columns="3">
+        <ice:panelGrid columns="3">
             <ice:outputLabel for="username" value="Username:"/>
             <ice:inputText id="username" value="#{userBean.login}" required="true" maxlength="20"/>
             <h:message for="username"/>
@@ -49,17 +38,15 @@
                        <f:convertDateTime pattern="#{pattern}"/>
             <h:message for="date"/>
             
-            <ice:outputLabel for="username" value="Username:"/>
-            <ice:inputText id="username" value="#{userBean.login}" required="true" maxlength="20"/>
-            <h:message for="username"/>
+            <ice:outputLabel for="hours" value="Hours:"/>
+            <ice:inputText id="hour" value="#{userProjectBean.hour}" required="true" maxlength="20"/>
+            <h:message for="hour"/>
             
-            <ice:outputLabel for="username" value="Username:"/>
-            <ice:inputText id="username" value="#{userBean.login}" required="true" maxlength="20"/>
-            <h:message for="username"/>
-                
-           
+            <ice:outputLabel for="minutes" value="Minutes:"/>
+            <ice:inputText id="minutes" value="#{userBean.login}" required="true" maxlength="20"/>
+            <h:message for="minutes"/>           
         </ice:panelGrid>
-        <ice:commandButton value="Submit" action="#{userBean.submitButton}"/>
+        <ice:commandButton value="Submit" action="enterUserProjectAction"/>
     </h:form>
 </section>
 <P>  The time on the server is ${serverTime}. </P>
