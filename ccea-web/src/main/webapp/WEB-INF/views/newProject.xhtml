@@ -13,49 +13,39 @@
 <section>
 <h1>
     Please add new Project! 
-    proje 
-    private Integer code;
-    private String name;
-    private String owner;
-    private Date dateStarted;
-    private Double estimatedDuration;
-    private Double actualDuration;
-    
-
-    
-    
+      
 </h1>
 <h:form>
         <icecore:singleSubmit/>
-        <h:panelGrid columns="3">
-            <h:outputLabel for="username" value="Username:"/>
-            <h:inputText id="project" value="#{project.name}" required="true" maxlength="20"/>
-            <h:message for="project"/>
+        <ice:panelGrid columns="3">
+            <ice:outputLabel for="username" value="Username:"/>
+            <ice:inputText id="project" value="#{project.name}" required="true" maxlength="20"/>
+            <ice:message for="project"/>
 
-            <h:outputLabel for="Owner" value="Owner:"/>
-            <h:inputText id="owner" value="#{project.owner}" required="true"
+            <ice:outputLabel for="Owner" value="Owner:"/>
+            <ice:inputText id="owner" value="#{project.owner}" required="true"
                          size="2" maxlength="20">
-            </h:inputText>  
-             <h:outputLabel for="Owner" value="Owner:"/>
-            <h:inputText id="owner" value="#{project.owner}" required="true"
+            </ice:inputText>  
+             <ice:outputLabel for="Owner" value="Owner:"/>
+            <ice:inputText id="owner" value="#{project.owner}" required="true"
                          size="2" maxlength="20">
-            </h:inputText>    
+            </ice:inputText>    
             
-            <h:outputLabel for="dateStarted" value="Start Date:"/>
-            <h:inputText id="dateStarted" value="#{project.dateStarted}" required="true"
+            <ice:outputLabel for="dateStarted" value="Start Date:"/>
+            <ice:inputText id="dateStarted" value="#{project.dateStarted}" required="true"
                          size="2" maxlength="20">
-            </h:inputText>  
+            </ice:inputText>  
              
-            <h:outputLabel for="expectedDuration" value="Expected Duration:"/>
-            <h:inputText id="expectedDuration" value="#{project.expectedDuration}" required="true"
+            <ice:outputLabel for="expectedDuration" value="Expected Duration:"/>
+            <ice:inputText id="expectedDuration" value="#{project.expectedDuration}" required="true"
                          size="2" maxlength="20">
-            </h:inputText>  
-            <h:outputLabel for="actualDuration" value="Actual Duration:"/>
-            <h:inputText id="actualDuration" value="#{project.actualDuration}" required="true"
+            </ice:inputText>  
+            <ice:outputLabel for="actualDuration" value="Actual Duration:"/>
+            <ice:inputText id="actualDuration" value="#{project.actualDuration}" required="true"
                          size="2" maxlength="20">
-            </h:inputText>   
-        </h:panelGrid>
-        <h:commandButton value="Submit" action="addProjectInfo"/>
+            </ice:inputText>   
+        </ice:panelGrid>
+        <ice:commandButton value="Submit" action="addProjectInfo"/>
     </h:form>
 </section>
 <P>  The time on the server is ${serverTime}. </P>

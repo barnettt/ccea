@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.ccea.persistence.CceaCrudTests
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 20.922 sec <<< FAILURE! - in com.ccea.persistence.CceaCrudTests
-testCRUDOperations(com.ccea.persistence.CceaCrudTests)  Time elapsed: 18.922 sec  <<< ERROR!
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 27.875 sec <<< FAILURE! - in com.ccea.persistence.CceaCrudTests
+testCRUDOperations(com.ccea.persistence.CceaCrudTests)  Time elapsed: 25.391 sec  <<< ERROR!
 org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.JDBCConnectionException: Could not open connection
 	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:514)
 	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:372)
@@ -184,7 +184,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
 
-testUserProjectCrud(com.ccea.persistence.CceaCrudTests)  Time elapsed: 0.969 sec  <<< ERROR!
+testUserProjectCrud(com.ccea.persistence.CceaCrudTests)  Time elapsed: 1.047 sec  <<< ERROR!
 org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.JDBCConnectionException: Could not open connection
 	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:514)
 	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:372)

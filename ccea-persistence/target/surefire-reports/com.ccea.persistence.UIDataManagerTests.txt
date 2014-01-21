@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.ccea.persistence.UIDataManagerTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 19.969 sec <<< FAILURE! - in com.ccea.persistence.UIDataManagerTests
-test(com.ccea.persistence.UIDataManagerTests)  Time elapsed: 18.922 sec  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 26.844 sec <<< FAILURE! - in com.ccea.persistence.UIDataManagerTests
+test(com.ccea.persistence.UIDataManagerTests)  Time elapsed: 25.391 sec  <<< ERROR!
 org.springframework.transaction.CannotCreateTransactionException: Could not open Hibernate Session for transaction; nested exception is org.hibernate.exception.JDBCConnectionException: Could not open connection
 	at org.springframework.orm.hibernate4.HibernateTransactionManager.doBegin(HibernateTransactionManager.java:514)
 	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:372)
