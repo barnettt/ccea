@@ -1,8 +1,0 @@
-package com.ccea.persistence.model;
-
-public class UserProjectDAO extends AbstractHibernateDAO<Class<?>> implements AbstractDAO{
-	
-	public UserProjectDAO(){
-		super();
-	}
-}

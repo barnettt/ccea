@@ -1,6 +1,0 @@
-package com.ccea.persistence;
-
-public abstract class AbstractCcaaTestData {
-
-	
-}

@@ -1,5 +1,0 @@
-package com.ccea.persistence.model;
-
-public interface CceaDAO {
-
-}
