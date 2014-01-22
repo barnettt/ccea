@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:icecore="http://www.icefaces.org/icefaces/core"
+      xmlns:ice="http://www.icefaces.org/icefaces/component">
+
+<h:head>
+    <title>New User</title>
+</h:head>
+<h:body>
+<section>
+<h1>
+    Please add a new User 
+</h1>
+<h:form>
+        <icecore:singleSubmit/>
+        <ice:panelGrid columns="3">
+            <ice:outputLabel for="username" value="Username:"/>
+            <ice:inputText id="username" value="#{userBean.login}" required="true" maxlength="20"/>
+            <ice:message for="username"/>
+
+            <ice:outputLabel for="Password" value="Password:"/>
+            <ice:inputText id="age" value="#{userBean.password}" required="true"
+                         size="2" maxlength="20">
+            </ice:inputText>      
+           
+        </ice:panelGrid>
+        <ice:commandButton value="Submit" action="addUserInfo"/>
+    </h:form>
+</section>
+<P>  The time on the server is ${serverTime}. </P>
+</h:body>
+</html>

@@ -1,0 +1,50 @@
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+    
+
+    <var name="userBean" class="com.ccea.persistence.model.pojo.User" />
+   <var name="projectBeanWrapper" class="com.ccea.web.beans.ProjectBeanWrapper" />
+   <var name="projectBean" class="com.ccea.persistence.model.pojo.Project" />
+   <var name="userProjectBean" class="com.ccea.persistence.model.pojo.UserProject" />
+   <var name="userProjectBeanWrapper" class="com.ccea.web.beans.UserProjectBeanWrapper" />
+       
+    <view-state id="userLoginProcess"  view="/login.xhtml">
+         <transition on="processLogin" to="processLoginAction" />
+    </view-state>
+    
+    <view-state id="enterProjectInfo"  view="/userProject.xhtml">
+         <transition on="processUserProject" to="enterUserProjectAction" />
+    </view-state>
+    
+    <view-state id="addProjectInfo"  view="/newProject.xhtml">
+         <transition on="processProject" to="enterProjectAction" />
+    </view-state>
+    
+    
+    <view-state id="addUserInfo"  view="/userProject.xhtml">
+         <transition on="processUser" to="enterUserAction" />
+    </view-state>
+    
+    
+    <action-state id="processLoginAction">
+        <evaluate expression="userLoginAction" />
+        <transition on="success" to="enterProjectInfo"/>
+        <transition on="error" to="userLoginProcess"/>
+    </action-state>
+    
+    <action-state id="enterUserProjectAction">
+        <evaluate expression="enterUserProjectAction.addUserProject()" />
+        <transition on="success" to="enterProjectInfo"/>
+        <transition on="error" to="userLoginProcess"/>
+    </action-state>
+    
+        <action-state id="enterProjectAction">
+        <evaluate expression="enterProjectAction" />
+        <transition on="success" to="enterProjectInfo"/>
+        <transition on="error" to="userLoginProcess"/>
+    </action-state>
+      
+    <end-state id="finish" />
+    
+</flow>
