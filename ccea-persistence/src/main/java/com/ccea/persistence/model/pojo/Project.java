@@ -1,5 +1,6 @@
 package com.ccea.persistence.model.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -8,8 +9,12 @@ import java.util.Date;
  * @author abuayyub
  * 
  */
-public class Project {
+public class Project implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7821353265452814085L;
 	private Integer code;
 	private String name;
 	private String owner;

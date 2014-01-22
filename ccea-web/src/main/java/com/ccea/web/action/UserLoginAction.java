@@ -15,7 +15,7 @@ import org.springframework.webflow.execution.RequestContext;
 import com.ccea.persistence.model.pojo.User;
 import com.ccea.persistence.report.UIDataManager;
 
-public class UserLoginAction extends CeaAbstractEventAction {
+public class UserLoginAction extends CceaAbstractEventAction {
 	
 	protected static Logger logger = LoggerFactory
             .getLogger(UserLoginAction.class);
@@ -26,7 +26,13 @@ public class UserLoginAction extends CeaAbstractEventAction {
 	public UserLoginAction() {
 		super(UserLoginAction.class);
 	}
-
+    
+	
+	public Event logout() {
+		
+		logger.info("Logout ueser Action");
+		return success;
+	}
 	
 	public Event checkUserLogin(RequestContext requestContext) throws Exception {
 		logger.info("enter UserLoggerAction");

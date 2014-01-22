@@ -12,7 +12,7 @@ import com.ccea.persistence.model.pojo.Project;
 import com.ccea.persistence.report.UIDataManager;
 import com.ccea.web.beans.ProjectBeanWrapper;
 
-public class EnterProjectAction extends CeaAbstractEventAction {
+public class EnterProjectAction extends CceaAbstractEventAction {
 
 	@Autowired
 	UIDataManager uiDataManager;

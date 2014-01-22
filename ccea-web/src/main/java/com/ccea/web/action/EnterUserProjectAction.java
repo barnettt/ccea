@@ -14,7 +14,7 @@ import com.ccea.persistence.model.pojo.UserProject;
 import com.ccea.persistence.report.UIDataManager;
 
 
-public class EnterUserProjectAction extends CeaAbstractEventAction {
+public class EnterUserProjectAction extends CceaAbstractEventAction {
 
 	@Autowired
 	UIDataManager uiDataManager;

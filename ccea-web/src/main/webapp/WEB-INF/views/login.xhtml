@@ -27,9 +27,9 @@
             </ice:inputSecret>      
            
         </ice:panelGrid>
-        <ice:commandButton value="Submit" action="#{processLoginAction}"/>
+        <ice:commandButton value="Submit" action="processLogin"/>
     </h:form>
 </section>
-<P>  The date and time on the server is ${serverTime}. </P>
+<P>  The date and time on the server is :<ice:outputLabel  value="#{serverTime}" />. </P>
 </h:body>
 </html>

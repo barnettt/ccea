@@ -1,5 +1,6 @@
 package com.ccea.persistence.model.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Id;
@@ -11,7 +12,11 @@ import javax.persistence.Id;
  * 
  */
 
-public class UserProject {
+public class UserProject implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5258525115777760400L;
 	// find all query
 	public static final String FIND_BY_ID_QUERY = "FROM UserProject p where p.code=:id and p.useId=:user and group by p.user, p.code order by p.date desc  ";
 	public static final String FIND_BY_USER_QUERY = "FROM UserProject p where p.userId=:user group by p.userId, p.code order by p.date desc  ";

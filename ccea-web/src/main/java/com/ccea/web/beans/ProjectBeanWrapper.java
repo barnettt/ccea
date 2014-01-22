@@ -1,5 +1,6 @@
 package com.ccea.web.beans;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,9 +8,14 @@ import com.ccea.persistence.model.pojo.Project;
 
 import javax.faces.model.SelectItem;
 
-public class ProjectBeanWrapper {
+public class ProjectBeanWrapper implements Serializable {
 
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 483328093499707992L;
+
 	private List<SelectItem> projects;
 	
 	private String currentProject;

@@ -20,7 +20,7 @@
           use-expressions="true"
           access-denied-page="/spring/login">
 
-        <form-login login-page="/spring/login"
+        <form-login login-page="/login"
                     login-processing-url="/spring/loginProcess"
                     default-target-url="/spring/main" always-use-default-target="true"
                     authentication-failure-url="/spring/login?login_error=1" />
@@ -34,6 +34,7 @@
 
         <logout logout-url="/spring/logout" logout-success-url="/spring/logoutSuccess"/>
         <intercept-url pattern="/secure" method="POST" access="hasRole('ROLE_SUPERVISOR')"/>
+        <intercept-url pattern="/" method="GET" access="hasRole('ROLE_ANONYMOUS')"/>
     </http>
 
     <!--

@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 
 import com.ccea.persistence.model.pojo.User;
 import com.ccea.persistence.model.pojo.UserProject;
-import com.ccea.persistence.model.pojo.UserProjectPK;
+
 
 /**
  * user projects DAO for managing users to project data.
@@ -25,49 +25,39 @@ import com.ccea.persistence.model.pojo.UserProjectPK;
 @Repository("userProjectDAO")
 public class UserProjectDAO extends AbstractHibernateDAO<UserProject> {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 7835694213038872722L;
+        /**
+         * 
+         */
+        private static final long serialVersionUID = 7835694213038872722L;
 
-	public UserProjectDAO() {
-		super();
-	}
+        public UserProjectDAO() {
+                super();
+        }
 
-	@Override
-	public UserProject findById(Integer id) {
+        @Override
+        public UserProject findById(Integer id) {
 
-		Criteria c = getSessionFactory().getCurrentSession().createCriteria(
-				UserProject.class);
-		c.add(Restrictions.eq("id", id));
-		List<UserProject> userProjects = c.list();
-		return userProjects.size() == 1 ? userProjects.get(0) : null;
+                Criteria c = getSessionFactory().getCurrentSession().createCriteria(
+                                UserProject.class);
+                c.add(Restrictions.eq("id", id));
+                List<UserProject> userProjects = c.list();
+                return userProjects.size() == 1 ? userProjects.get(0) : null;
 
-	}
+        }
 
-	public UserProject findById(UserProjectPK id) {
-
-		Query c = getSessionFactory().getCurrentSession().createQuery(
-				UserProject.FIND_BY_ID_QUERY);
-		c.setInteger("id", id.getId());
-		c.setInteger("user", id.getUser());		
-		List<UserProject> userProjects = c.list();
-		return userProjects.size() == 1 ? userProjects.get(0) : null;
-	}
-
-	public Set<UserProject> findByUser(User user) {
-		Set<UserProject> col = new HashSet<UserProject>();			
-		Query c = getSessionFactory().getCurrentSession().createQuery(
-				UserProject.FIND_BY_USER_QUERY);		
-		c.setInteger("user", user.getUserId());		
-		Collection<UserProject> userProjects = c.list();		
-		userProjects.addAll(col);		
-		return col;
-	}
-	
-	@Override
-	public UserProject findByName(String field, String value) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+        public Set<UserProject> findByUser(User user) {
+                Set<UserProject> col = new HashSet<UserProject>();                        
+                Query c = getSessionFactory().getCurrentSession().createQuery(
+                                UserProject.FIND_BY_USER_QUERY);                
+                c.setInteger("user", user.getUserId());                
+                Collection<UserProject> userProjects = c.list();                
+                userProjects.addAll(col);                
+                return col;
+        }
+        
+        @Override
+        public UserProject findByName(String field, String value) {
+                // TODO Auto-generated method stub
+                return null;
+        }
 }

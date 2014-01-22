@@ -1,5 +1,6 @@
 package com.ccea.persistence.model.pojo;
 
+import java.io.Serializable;
 import java.util.HashSet;
 import java.util.List;
 
@@ -12,7 +13,11 @@ import javax.persistence.JoinColumn;
  * 
  */
 
-public class User implements Comparable<User>{
+public class User implements Comparable<User>, Serializable  {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1657016954139472941L;
 	private Integer userId;
 	private String firstName;
 	private String lastName;

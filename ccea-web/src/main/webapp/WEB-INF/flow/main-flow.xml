@@ -26,25 +26,44 @@
          <transition on="processUser" to="enterUserAction" />
     </view-state>
     
+     <view-state id="viewProjectReport"  view="/WEB-INF/views/projectReport.xhtml">
+         <transition on="viewReport" to="viewProjectReportAction" />
+    </view-state>
+    
+    <view-state id="viewMenu"  view="/WEB-INF/views/menu.xhtml">
+         <transition on="addUserInfo" to="addUserInfo" />
+         <transition on="userLoginProcess" to="userLoginProcess" />
+         <transition on="enterProjectInfo" to="enterProjectInfo" />
+         <transition on="addProjectInfo" to="addProjectInfo" />
+         <transition on="viewProjectReport" to="viewProjectReport" />
+        <transition on="userLoginProcess" to="userLoginProcess.logout()" />         
+    </view-state>
     
     <action-state id="processLoginAction">
         <evaluate expression="userLoginAction" />
-        <transition on="success" to="enterProjectInfo"/>
+        <transition on="success" to=" viewMenu"/>
         <transition on="error" to="userLoginProcess"/>
     </action-state>
     
     <action-state id="enterUserProjectAction">
         <evaluate expression="enterUserProjectAction.addUserProject()" />
-        <transition on="success" to="enterProjectInfo"/>
-        <transition on="error" to="userLoginProcess"/>
+        <transition on="success" to="viewMenu"/>
+        <transition on="error" to="enterProjectInfo"/>
     </action-state>
     
-        <action-state id="enterProjectAction">
+    <action-state id="enterProjectAction">
         <evaluate expression="enterProjectAction" />
-        <transition on="success" to="enterProjectInfo"/>
-        <transition on="error" to="userLoginProcess"/>
+        <transition on="success" to="viewMenu"/>
+        <transition on="error" to="addProjectInfo"/>
     </action-state>
       
+    <action-state id="viewProjectReportAction">
+        <evaluate expression="viewProjectReportAction.getProjectReport" />
+        <transition on="success" to="viewProjectReport"/>
+        <transition on="error" to="viewProjectReport"/>
+    </action-state>
+    
+    
     <end-state id="finish" />
     
 </flow>
