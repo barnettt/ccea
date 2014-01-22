@@ -1,9 +1,0 @@
-package com.icesoft.spring.security;
-
-public class JsfLoginUrlAuthenticationEntryPoint {
-
-	public JsfLoginUrlAuthenticationEntryPoint() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

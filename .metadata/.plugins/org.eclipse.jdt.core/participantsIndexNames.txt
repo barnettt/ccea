@@ -1,9 +1,0 @@
-INDEX VERSION 1.126
-C:\workspace-ccea\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4052138498.index
-\ccea-web\src\main\java
-C:\workspace-ccea\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2663525570.index
-\ccea-web\src\main\java
-C:\workspace-ccea\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2785388042.index
-\ccea-web\src\main\java
-C:\workspace-ccea\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2502484201.index
-\ccea-web\src\main\java

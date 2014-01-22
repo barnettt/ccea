@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-<typeInfo handle="=ccea-persistence/src\/main\/java&lt;com.ccea.persistence.model{AbstractHibernateDAO.java[AbstractHibernateDAO" modifiers="1025" timestamp="1390087341000"/>
-<typeInfo handle="=ccea-persistence/src\/main\/java&lt;com.ccea.persistence.report{UIDataManager.java[UIDataManager" modifiers="1" timestamp="1390147149921"/>
-<typeInfo handle="=ccea-persistence/src\/main\/java&lt;com.ccea.persistence.model.pojo{UserProject.java[UserProject" modifiers="1" timestamp="1390083177390"/>
-<typeInfo handle="=ccea-persistence/src\/main\/java&lt;com.ccea.persistence.model.pojo{User.java[User" modifiers="1" timestamp="1390096000187"/>
-<typeInfo handle="=ccea-persistence/src\/main\/java&lt;com.ccea.persistence.model.pojo{Project.java[Project" modifiers="1" timestamp="1389975944890"/>
-</typeInfoHistroy>
