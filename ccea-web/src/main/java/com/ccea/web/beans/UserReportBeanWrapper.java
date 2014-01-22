@@ -2,6 +2,11 @@ package com.ccea.web.beans;
 
 import java.io.Serializable;
 
+/**
+ * container for the user report data
+ * @author abuayyub
+ *
+ */
 public class UserReportBeanWrapper implements Serializable {
 	
 	

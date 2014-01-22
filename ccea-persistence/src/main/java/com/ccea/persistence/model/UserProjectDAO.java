@@ -16,7 +16,8 @@ import com.ccea.persistence.model.pojo.UserProject;
 
 
 /**
- * user projects DAO for managing users to project data.
+ * user projects DAO for managing users 
+ * to project data.
  * 
  * @author abuayyub
  * 

@@ -15,6 +15,11 @@ import org.springframework.webflow.execution.RequestContext;
 import com.ccea.persistence.model.pojo.User;
 import com.ccea.persistence.report.UIDataManager;
 
+/**
+ * manage the actions for the users login
+ * @author abuayyub
+ *
+ */
 public class UserLoginAction extends CceaAbstractEventAction {
 	
 	protected static Logger logger = LoggerFactory

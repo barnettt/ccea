@@ -13,6 +13,11 @@ import com.ccea.persistence.model.pojo.User;
 import com.ccea.persistence.model.pojo.UserProject;
 import com.ccea.persistence.report.UIDataManager;
 
+/**
+ * Manage the actions for uer to projects
+ * @author abuayyub
+ *
+ */
 
 public class EnterUserProjectAction extends CceaAbstractEventAction {
 

@@ -12,6 +12,12 @@ import com.ccea.persistence.model.pojo.Project;
 import com.ccea.persistence.report.UIDataManager;
 import com.ccea.web.beans.ProjectBeanWrapper;
 
+/**
+ * manage the actions for projects 
+ * 
+ * @author abuayyub
+ *
+ */
 public class EnterProjectAction extends CceaAbstractEventAction {
 
 	@Autowired

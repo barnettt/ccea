@@ -7,6 +7,7 @@ import com.ccea.web.beans.UserReportBeanWrapper;
 
 
 /**
+ * Manage the actions for the reporting function
  * collect Data for report
  * @author abuayyub
  *

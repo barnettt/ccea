@@ -8,6 +8,11 @@ import com.ccea.persistence.model.pojo.Project;
 
 import javax.faces.model.SelectItem;
 
+/**
+ * wrapper for the project data
+ * @author abuayyub
+ *
+ */
 public class ProjectBeanWrapper implements Serializable {
 
 	

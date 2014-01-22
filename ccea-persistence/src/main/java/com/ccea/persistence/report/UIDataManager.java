@@ -18,6 +18,11 @@ import com.ccea.persistence.model.pojo.Project;
 import com.ccea.persistence.model.pojo.User;
 import com.ccea.persistence.model.pojo.UserProject;
 
+/**
+ * data service for the UI
+ * @author abuayyub
+ *
+ */
 @Service("uiServiceManager")
 @Transactional
 public class UIDataManager {

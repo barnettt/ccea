@@ -4,8 +4,13 @@ package com.ccea.web.action;
 import org.springframework.webflow.action.MultiAction;
 import org.springframework.webflow.execution.Event;
 
+/**
+ * webflow multi action super class
+ * @author abuayyub
+ *
+ */
 @SuppressWarnings("rawtypes")
-public abstract class CceaAbstractEventAction extends MultiAction{
+public abstract class CceaAbstractEventAction extends MultiAction {
 
 	
 	private Class clazz;
