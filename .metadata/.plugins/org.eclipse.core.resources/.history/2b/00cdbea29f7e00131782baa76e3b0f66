@@ -1,0 +1,27 @@
+package com.ccea.persistence.model.pojo;
+
+import java.util.Date;
+
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+
+
+
+/**
+ * represents the users time on a project in the system  
+ * @author abuayyub
+ *
+ */
+
+public class UserProject {
+	
+	
+	private UserProjectPK id;  
+ 	private Date date;
+ 	private Integer hours;
+ 	private Integer minutes;
+ 	private String startTime;
+ 	private String endTime;
+ 	
+ 	
+}

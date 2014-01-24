@@ -1,0 +1,48 @@
+!SESSION 2014-01-17 10:44:47.656 -----------------------------------------------
+eclipse.buildId=3.4.0.201310051614-RELEASE-e43
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_GB
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.springsource.sts.ide
+
+!ENTRY org.jboss.ide.eclipse.as.core 4 1644298242 2014-01-17 11:07:28.250
+!MESSAGE Full publish failed for module ccea-web
+!SUBENTRY 1 org.eclipse.wst.server.core 4 1644298251 2014-01-17 11:07:28.250
+!MESSAGE Error reading file C:\workspace-ccea\ccea-web\target\m2e-wtp\web-resources\META-INF\MANIFEST.MF
+!SUBENTRY 1 org.eclipse.wst.server.core 4 1644298251 2014-01-17 11:07:28.250
+!MESSAGE Error reading file C:\workspace-ccea\ccea-web\target\m2e-wtp\web-resources\META-INF\maven\com.ccea\web\pom.properties
+!SUBENTRY 1 org.eclipse.wst.server.core 4 1644298251 2014-01-17 11:07:28.250
+!MESSAGE Error reading file C:\workspace-ccea\ccea-web\target\m2e-wtp\web-resources\META-INF\maven\com.ccea\web\pom.xml
+!SUBENTRY 1 org.eclipse.wst.server.core 4 1644298251 2014-01-17 11:07:28.250
+!MESSAGE Error reading file C:\workspace-ccea\ccea-web\target\m2e-wtp\web-resources\WEB-INF\spring\appServlet\servlet-context.xml
+!SUBENTRY 1 org.eclipse.wst.server.core 4 1644298251 2014-01-17 11:07:28.250
+!MESSAGE Error reading file C:\workspace-ccea\ccea-web\target\m2e-wtp\web-resources\WEB-INF\spring\root-context.xml
+!SUBENTRY 1 org.eclipse.wst.server.core 4 1644298251 2014-01-17 11:07:28.250
+!MESSAGE Error reading file C:\workspace-ccea\ccea-web\target\m2e-wtp\web-resources\WEB-INF\views\home.jsp
+!SUBENTRY 1 org.eclipse.wst.server.core 4 1644298251 2014-01-17 11:07:28.250
+!MESSAGE Error reading file C:\workspace-ccea\ccea-web\target\m2e-wtp\web-resources\WEB-INF\web.xml
+
+!ENTRY org.eclipse.core.resources 4 271 2014-01-17 11:07:28.593
+!MESSAGE File not found: C:\workspace-ccea\ccea-persistence\target\classes\META-INF\maven\com.ccea\spring-utility\pom.properties.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-01-17 11:07:28.703
+!MESSAGE Module spring-web-3.2.3.RELEASE.jar published without error.
+
+!ENTRY org.eclipse.core.resources 4 271 2014-01-17 11:08:40.031
+!MESSAGE File not found: C:\workspace-ccea\ccea-persistence\target\classes\META-INF\maven\com.ccea\spring-utility\pom.properties.
+
+!ENTRY org.jboss.ide.eclipse.as.core 0 33685505 2014-01-17 11:10:55.703
+!MESSAGE Module ccea-persistence published without error.
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842760 2014-01-17 11:11:00.500
+!MESSAGE Server Starting
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842769 2014-01-17 11:11:49.437
+!MESSAGE Server Startup Succeeded
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16842776 2014-01-17 11:27:51.265
+!MESSAGE Server shutting down
+
+!ENTRY org.jboss.ide.eclipse.as.core 1 16973825 2014-01-17 11:27:52.125
+!MESSAGE Server processes have been terminated.

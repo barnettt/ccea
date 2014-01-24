@@ -1,0 +1,11 @@
+package com.ccea.persistence.model.pojo;
+
+public class User {
+	 private Integer id;
+ 	 private String firstName;
+ 	 private String lastName;
+ 	 private String login;
+ 	 private String department;
+ 	 private String password;
+ 	 java.util.List<UserProject> userProjects;
+}

@@ -1,0 +1,25 @@
+package com.ccea.web.action;
+
+import org.springframework.webflow.action.MultiAction;
+import org.springframework.webflow.execution.Action;
+import org.springframework.webflow.execution.Event;
+import org.springframework.webflow.execution.RequestContext;
+
+import com.ccea.persistence.model.pojo.Project;
+
+public class EnterProjectAction extends MultiAction {
+
+	public EnterProjectAction() {
+		 super();
+	}
+
+	
+	public Event addProjectBean(RequestContext context) throws Exception {
+		Project project = new Project();
+		
+        context.getFlowScope().put("projectBean", project);
+		
+	    return new Event(this,"success");
+	}
+
+}

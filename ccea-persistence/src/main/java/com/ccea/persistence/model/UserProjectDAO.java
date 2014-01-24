@@ -16,8 +16,7 @@ import com.ccea.persistence.model.pojo.UserProject;
 
 
 /**
- * user projects DAO for managing users 
- * to project data.
+ * user projects DAO for managing users to project data.
  * 
  * @author abuayyub
  * 
@@ -26,23 +25,23 @@ import com.ccea.persistence.model.pojo.UserProject;
 @Repository("userProjectDAO")
 public class UserProjectDAO extends AbstractHibernateDAO<UserProject> {
 
-        /**
-         * 
-         */
-        private static final long serialVersionUID = 7835694213038872722L;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7835694213038872722L;
 
-        public UserProjectDAO() {
-                super();
-        }
+	public UserProjectDAO() {
+		super();
+	}
 
         @Override
         public UserProject findById(Integer id) {
 
-                Criteria c = getSessionFactory().getCurrentSession().createCriteria(
-                                UserProject.class);
-                c.add(Restrictions.eq("id", id));
-                List<UserProject> userProjects = c.list();
-                return userProjects.size() == 1 ? userProjects.get(0) : null;
+		Criteria c = getSessionFactory().getCurrentSession().createCriteria(
+				UserProject.class);
+		c.add(Restrictions.eq("id", id));
+		List<UserProject> userProjects = c.list();
+		return userProjects.size() == 1 ? userProjects.get(0) : null;
 
         }
 

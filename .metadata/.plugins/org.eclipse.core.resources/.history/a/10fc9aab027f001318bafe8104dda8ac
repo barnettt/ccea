@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16-Jan-2014 00:55:26 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.ccea.persistence.model.pojo.Project" table="PROJECT">
+        <id name="code" type="java.lang.Integer" access="field">
+            <column name="CODE" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="java.lang.String" access="field">
+            <column name="NAME" />
+        </property>
+        <property name="owner" type="java.lang.String" access="field">
+            <column name="OWNER" />
+        </property>
+        <property name="dateStarted" type="java.util.Date" access="field">
+            <column name="DATESTARTED" />
+        </property>
+        <property name="estimatedDuration" type="java.lang.Double" access="field">
+            <column name="ESTIMATEDDURATION" />
+        </property>
+        <property name="actualDuration" type="java.lang.Double" access="field">
+            <column name="ACTUALDURATION" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,42 @@
+package com.ccea.persistence.model;
+
+import java.util.List;
+
+import com.ccea.persistence.model.pojo.Project;
+import com.ccea.persistence.model.pojo.UserProject;
+import com.ccea.persistence.model.pojo.UserProjectPK;
+
+/**
+ * user projects DAO for managing users to project data.
+ * 
+ * @author abuayyub
+ *
+ */
+@SuppressWarnings("unchecked")
+public class UserProjectDAO extends AbstractHibernateDAO<UserProject> {
+	
+	public UserProjectDAO(){
+		super();
+	}
+
+	@Override
+	public UserProject findById(Object id) {
+		
+		UserProjectPK pk = null;
+		if(id instanceof UserProjectPK) {
+			pk = (UserProjectPK)id;
+		}		
+		UserProject p = new UserProject();
+		p.setId(pk);		
+		List<UserProject> userProjects = getHibernateTemplate().findByExample(p);
+		return userProjects.size() == 1 ? userProjects.get(0) : null;
+		
+	}
+
+	
+	@Override
+	public UserProject findByName(String field, String value) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

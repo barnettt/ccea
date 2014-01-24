@@ -1,0 +1,22 @@
+package com.ccea.web.action;
+
+import java.lang.reflect.Type;
+
+import org.springframework.webflow.action.MultiAction;
+import org.springframework.webflow.execution.Event;
+
+public abstract class CeaAbstractEventAction <T> extends MultiAction{
+
+	private Class<T> clazz;
+	protected final Event success = new Event(clazz,"success");
+	protected final Event error  = new Event(clazz,"error");
+	
+	/**
+	 * constructor
+	 * @param myClazz
+	 */
+	public CeaAbstractEventAction(Class<T> myClazz) {
+		clazz = myClazz;
+	}
+
+}

@@ -1,0 +1,22 @@
+package com.ccea.persistence.model;
+
+import com.ccea.persistence.model.pojo.UserProject;
+
+public class UserProjectDAO extends AbstractHibernateDAO<Integer, UserProject> {
+	
+	public UserProjectDAO(){
+		super(UserProject.class);
+	}
+
+	@Override
+	public UserProject findById(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserProject findByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

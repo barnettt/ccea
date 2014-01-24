@@ -1,0 +1,12 @@
+package com.ccea.persistence.model.pojo;
+
+import java.util.Date;
+
+public class Project {
+	private Integer code;
+	  private String name;  
+	  private String owner;
+	  private Date dateStarted;  
+	  private Double estimatedDuration;   
+	  private Double actualDuration;
+}

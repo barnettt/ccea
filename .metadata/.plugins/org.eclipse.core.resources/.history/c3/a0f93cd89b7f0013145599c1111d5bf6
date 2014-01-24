@@ -1,0 +1,49 @@
+package com.ccea.persistence;
+
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.ccea.persistence.CceaCrudTests.AbstractCcaaTestData;
+import com.ccea.persistence.model.ProjectDAO;
+import com.ccea.persistence.model.UserDAO;
+import com.ccea.persistence.model.UserProjectDAO;
+
+@ContextConfiguration({ "classpath:/META-INF/ExampleConfigurationTests-context.xml" })
+@RunWith(SpringJUnit4ClassRunner.class)
+public class UserReportTest extends AbstractTransactionalJUnit4SpringContextTests {
+	
+	// needed to create the test data
+	@Autowired
+	ProjectDAO projectDAO;
+	@Autowired
+	UserDAO userDAO;
+	@Autowired
+	UserProjectDAO userProjectDAO;
+
+	
+	@Autowired
+	private ReportServiceImpl reportService;
+	
+	@Autrowired
+	
+	@BeforeClass
+	public void setupBefore() {
+		data.
+	}
+	
+	
+	
+	@Test
+	public void testGetUesrReport() throws Exception {
+		assertNotNull(reportService);
+		CceaCrudTests.AbstractCcaaTestData data = new CceaCrudTests().new AbstractCcaaTestData();		
+	}
+
+}

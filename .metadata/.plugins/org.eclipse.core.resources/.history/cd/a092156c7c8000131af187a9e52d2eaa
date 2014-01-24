@@ -1,0 +1,70 @@
+package com.ccea.persistence.model;
+
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Query;
+import org.hibernate.criterion.Restrictions;
+import org.springframework.stereotype.Repository;
+
+import com.ccea.persistence.model.pojo.User;
+import com.ccea.persistence.model.pojo.UserProject;
+import com.ccea.persistence.model.pojo.UserProjectPK;
+
+/**
+ * user projects DAO for managing users to project data.
+ * 
+ * @author abuayyub
+ * 
+ */
+@SuppressWarnings("unchecked")
+@Repository("userProjectDAO")
+public class UserProjectDAO extends AbstractHibernateDAO<UserProject> {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7835694213038872722L;
+
+	public UserProjectDAO() {
+		super();
+	}
+
+	@Override
+	public UserProject findById(Integer id) {
+
+		Criteria c = getSessionFactory().getCurrentSession().createCriteria(
+				UserProject.class);
+		c.add(Restrictions.eq("id", id));
+		List<UserProject> userProjects = c.list();
+		return userProjects.size() == 1 ? userProjects.get(0) : null;
+
+	}
+
+	public UserProject findById(UserProjectPK id) {
+
+		Query c = getSessionFactory().getCurrentSession().createQuery(
+				UserProject.FIND_BY_ID_QUERY);
+		c.setInteger("id", id.getId());
+		c.setInteger("user", id.getUser());		
+		List<UserProject> userProjects = c.list();
+		return userProjects.size() == 1 ? userProjects.get(0) : null;
+	}
+
+	public List<UserProject> findByUser(User user) {
+		
+		Criteria c = getSessionFactory().getCurrentSession().createCriteria(UserProject.class);
+		c.add(Restrictions.eq("userId",user.getUserId()));	
+//		Query c = getSessionFactory().getCurrentSession().createQuery(
+//				UserProject.FIND_BY_USER_QUERY);		
+//		c.setInteger("user", user.getUserId());		
+		List<UserProject> userProjects = c.list();
+		return userProjects;
+	}
+	
+	@Override
+	public UserProject findByName(String field, String value) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

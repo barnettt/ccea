@@ -1,0 +1,135 @@
+package com.ccea.persistence;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.junit.Before;
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.ccea.persistence.ReportServiceImpl;
+import com.ccea.persistence.model.ProjectDAO;
+import com.ccea.persistence.model.UserDAO;
+import com.ccea.persistence.model.UserProjectDAO;
+import com.ccea.persistence.model.pojo.Project;
+import com.ccea.persistence.model.pojo.User;
+import com.ccea.persistence.model.pojo.UserProject;
+import com.ccea.persistence.model.pojo.UserType;
+
+import junit.framework.TestCase;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration({"classpath:/META-INF/ExampleConfigurationTests-context.xml"})
+public class ProjectCrudTests extends AbstractTransactionalJUnit4SpringContextTests {
+    
+	
+	
+	 	   
+	 	
+	 	@Autowired
+	 	ProjectDAO projectDAO;
+	 	@Autowired 
+	 	UserDAO userDAO;
+	 	@Autowired
+	 	UserProjectDAO userProjectDAO;
+
+	    @Before
+	    public void setUp() {
+	        
+	    }
+	
+	private ReportServiceImpl service = new ReportServiceImpl();
+	
+	/**
+	 * used just one test to do the insert and delete, find 
+	 * 
+	 * @throws Exception
+	 */
+	@Test
+	public void testProjectCRUD() throws Exception {
+		
+		CceaCrudTests.AbstractCcaaTestData data = new CceaCrudTests().new AbstractCcaaTestData();
+		
+		List<Integer> ids = new ArrayList<Integer>();
+		for(Project p: data.getProjects()) {
+		   ids.add(p.getCode());
+		   projectDAO.create(p);
+		}
+		// check that these are in the database
+	    List<Project> ps  = projectDAO.findAll();	    
+	    Assert.assertTrue(ps.size() == 4);
+	    
+	    // check the delete operation
+	    
+	    Project p1 = ps.get(0);
+	    Integer id = p1.getCode();
+	    
+	    p1 = projectDAO.findById(id);
+	    Assert.assertTrue(p1.getCode().equals(id));	    
+	    
+	    projectDAO.delete(p1);	    
+	   
+	    ps  = projectDAO.findAll();
+	    Assert.assertTrue(ps.size() == 3);
+	    
+	    
+	}
+	
+
+	class AbstractCcaaTestData {
+		
+		
+
+		public  List<User> getUser1() {
+			List<User> users = new ArrayList<User>();
+			User user = new User(null,"Tod","Barnett","tbarn","tbarn","IT",UserType.HOMEWORKER,new ArrayList<UserProject>());
+			User user1 = new User(null,"John","Doe","jdoe","jdoe","HR",UserType.HOMEWORKER,new ArrayList<UserProject>());
+			User user2 = new User(null,"Peter","Parker","ppark","ppark","HR",UserType.FINANCECLERK,new ArrayList<UserProject>());
+			User user3 = new User(null,"Marry","Jane","mjane","mjane","HR",UserType.HOMEWORKER,new ArrayList<UserProject>());
+			
+			users.add(user);
+			users.add(user1);
+			users.add(user2);
+			users.add(user3);
+			
+			return users;
+		}
+		
+		
+		/*
+		 * private Integer code;
+	  private String name;  
+	  private String owner;
+	  private Date dateStarted;  
+	  private Double estimatedDuration;   
+	  private Double actualDuration;
+		 */
+		public  List<Project> getProjects() {
+			Calendar cal = Calendar.getInstance();
+			List<Project> projects = new ArrayList<Project>();
+			cal.set(Calendar.MONTH,6);
+			Project project = new Project(null,"AS400 Migration","Duncan Smith",cal.getTime(),Double.valueOf(180.00),Double.valueOf(0.00));
+			Project project2 = new Project(null,"User Gateway Service","ES Houdini",cal.getTime(),Double.valueOf(60.00),Double.valueOf(0.00));
+			Project project3= new Project(null,"NHS Patient Records","Cap Gemini",cal.getTime(),Double.valueOf(360.00),Double.valueOf(0.00));
+			Project project4= new Project(null,"User Gateway Service","Zenica Services",cal.getTime(),Double.valueOf(60.00),Double.valueOf(0.00));
+			
+			projects.add(project);
+			projects.add(project2);
+			projects.add(project3);
+			projects.add(project4);
+			
+			return projects;
+		}
+	}
+
+}

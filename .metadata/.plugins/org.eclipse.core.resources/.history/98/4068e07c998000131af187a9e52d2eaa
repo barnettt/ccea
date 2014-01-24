@@ -1,0 +1,13 @@
+package com.ccea.persistence.report;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+@Service("uiServiceManager")
+@Transactional
+public class UIServiceManager {
+	
+    public String checkLoginDetails(String userName,String password) {
+    	
+    }
+}

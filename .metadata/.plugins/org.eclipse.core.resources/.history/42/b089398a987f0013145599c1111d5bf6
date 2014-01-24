@@ -1,0 +1,49 @@
+package com.ccea.persistence.report;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.ccea.persistence.model.ProjectDAO;
+import com.ccea.persistence.model.UserDAO;
+import com.ccea.persistence.model.pojo.Project;
+import com.ccea.persistence.model.pojo.User;
+
+@Service("UserReport")
+@Transactional
+public class UserReportManager {
+	
+	protected static Logger logger = LoggerFactory
+            .getLogger(UserReportManager.class);
+	
+	@Autowired
+	UserDAO userDAO;
+	
+	@Autowired
+	ProjectDAO projectDAO;
+	
+	public List<User> getAllUserProjects(){
+		
+		Map<Project,List<User>> userProjMap  = new HashMap<Project,List<User>> ();
+		Map<Integer,Project> projInfo = new HashMap<Integer,Project>(); 
+		List<User> userList= userDAO.findAll();
+		List<Project>projectList = projectDAO.findAll();
+		
+		// put the projects in a new list keyed by id
+		for (Project p :projectList) {
+			projInfo.put(p.getCode(),p);
+		}
+		
+		// 
+		
+		
+		
+		return null;
+	}
+}

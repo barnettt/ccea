@@ -7,6 +7,9 @@
 	</configSuffixes>
 	<enableImports><![CDATA[true]]></enableImports>
 	<configs>
+		<config>target/m2e-wtp/web-resources/WEB-INF/spring/config/security-config.xml</config>
+		<config>target/m2e-wtp/web-resources/WEB-INF/spring/config/webflow-config.xml</config>
+		<config>target/m2e-wtp/web-resources/WEB-INF/spring/config/webmvc-config.xml</config>
 	</configs>
 	<configSets>
 	</configSets>

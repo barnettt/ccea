@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class  name="com.totalgp.its.gas.service.beans.Meter"  table="JLS.GAS_READS">
+
+      
+    <id name="id" type="java.lang.Long">
+      <column name="GR_ID"/>
+      <generator class="identity"/>
+    </id>
+    <property name="mpr" type="big_integer">
+      <column length="10" name="MPR" not-null="true"/>
+    </property>
+    <property name="gasDay" type="date">
+      <column name="DAY_DATE" not-null="true"/>
+    </property>    
+    <property name="startReading" type="string">
+      <column length="12" name="START_METER_READING" not-null="false"/>
+    </property>
+    <property name="endReading" type="string">
+      <column length="12" name="END_METER_READING" not-null="false"/>
+    </property>
+    <property name="unitOfMeasure" type="string">
+      <column length="1" name="METRIC_IMPERIAL_INDICATOR" not-null="false"/>
+    </property>
+     <property name="correctionFactor" type="big_decimal">
+      <column  name="CORRECTION_FACTOR" not-null="false"/>
+    </property>
+    <property name="calorificValue" type="big_decimal">
+      <column  name="CVALUE" not-null="false"/>
+    </property>
+    <property name="status" type="string">
+      <column length="1" name="STATUS" not-null="false"/>
+    </property>
+     <property name="readingUnits" type="big_integer">
+      <column  name="METER_READING_UNITS" not-null="false"/>
+    </property>
+    <property name="startCorrectorReading" type="string">
+      <column length="12" name="START_CORRECTED_READING" not-null="false"/>
+    </property>
+    <property name="endCorrectorReading" type="string">
+      <column length="12" name="END_CORRECTED_READING" not-null="false"/>
+    </property>
+     <property name="correctorCorrectionFactor" type="big_decimal">
+      <column  name="CORRECTOR_CORRECTION_FACTOR" not-null="false"/>
+    </property>
+     <property name="correctorReadingUnits" type="big_integer">
+      <column  name="CORRECTED_READING_UNITS" not-null="false"/>
+    </property>
+    
+  </class>
+  <!--[CDATA[ SELECT meter FROM Meter meter WHERE   meter.gasDay >=:startDate AND meter.status = :status AND meter.mpr = :mpr ]] -->
+     <query name="retrieveMPRNData">
+          <![CDATA[SELECT meter FROM Meter meter WHERE meter.status = :status and meter.mpr = :mprn]]>
+    </query>
+
+  <query name="updateMeter">
+          <![CDATA[ UPDATE Meter meter SET meter.status = :status where meter.id = :id ]]>
+
+    </query>
+</hibernate-mapping>

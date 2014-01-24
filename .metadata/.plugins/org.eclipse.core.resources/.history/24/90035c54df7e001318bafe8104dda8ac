@@ -1,0 +1,27 @@
+package com.ccea.persistence;
+
+import java.util.Calendar;
+
+public abstract class AbstractCcaaTestData {
+	
+	Calendar cal = Calendar.getInstance();
+
+	public static User getUser1() {
+		
+		
+		
+	}
+	
+	public static User getUser2() {
+		
+	}
+	
+	public static UserProject() getUserProject {
+		
+	}
+	
+	public static List<Project> getProjects {
+		
+		
+	}
+}

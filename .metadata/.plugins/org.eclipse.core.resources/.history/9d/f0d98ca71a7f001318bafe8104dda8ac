@@ -1,0 +1,95 @@
+package com.ccea.persistence.model.pojo;
+
+import java.util.Date;
+
+
+/**
+ * represents the users time on a project in the system  
+ * @author abuayyub
+ *
+ */
+
+public class UserProject {
+	
+	
+	private UserProjectPK id;  
+ 	/**
+	 * @return the id
+	 */
+	public UserProjectPK getId() {
+		return id;
+	}
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(UserProjectPK id) {
+		this.id = id;
+	}
+	/**
+	 * @return the date
+	 */
+	public Date getDate() {
+		return date;
+	}
+	/**
+	 * @param date the date to set
+	 */
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	/**
+	 * @return the hours
+	 */
+	public Integer getHours() {
+		return hours;
+	}
+	/**
+	 * @param hours the hours to set
+	 */
+	public void setHours(Integer hours) {
+		this.hours = hours;
+	}
+	/**
+	 * @return the minutes
+	 */
+	public Integer getMinutes() {
+		return minutes;
+	}
+	/**
+	 * @param minutes the minutes to set
+	 */
+	public void setMinutes(Integer minutes) {
+		this.minutes = minutes;
+	}
+	/**
+	 * @return the startTime
+	 */
+	public String getStartTime() {
+		return startTime;
+	}
+	/**
+	 * @param startTime the startTime to set
+	 */
+	public void setStartTime(String startTime) {
+		this.startTime = startTime;
+	}
+	/**
+	 * @return the endTime
+	 */
+	public String getEndTime() {
+		return endTime;
+	}
+	/**
+	 * @param endTime the endTime to set
+	 */
+	public void setEndTime(String endTime) {
+		this.endTime = endTime;
+	}
+	private Date date;
+ 	private Integer hours;
+ 	private Integer minutes;
+ 	private String startTime;
+ 	private String endTime;
+ 	
+ 	
+}
