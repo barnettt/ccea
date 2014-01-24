@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<publish-info>
-  <server id="jboss-as-7.1.1.Final" path="publish0.dat"/>
-  <server id="GlassFish 3.1 at localhost" path="publish1.dat"/>
-</publish-info>
